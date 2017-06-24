@@ -1,0 +1,36 @@
+{
+    "name": "Sticky Notes",
+  "description": "Make sticky notes",
+  "version": "2.0",
+  "permissions": [
+    "http://*/"
+  ],
+   "background": {
+      "scripts": [ "background.js" ]
+   },
+   "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["contentscript.js"]
+    }
+  ],
+   "browser_action": {
+      "default_icon": "icon128.png",
+      "default_popup": "index.html"
+   },
+   "content_security_policy": "script-src 'self' https://google.com; object-src 'self'",
+   "description": "Easiest way for taking quick notes. Features like font size, color & themes. Collect as you browse in an awesome manner (See Demo)",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCR4PtX1tJHSObNq0NtEbufk16lW2+S84kEjWsrGe7BEB9YBurI89ZO6BA+uqTaPQfTr5KPV1CLgNHH0Tl7RjLSmD0GiiTpSEhsKsY+nlU01AtH27g8n5b6ZGX1v2XvW5FYwaYJhS9r3sBxYSVCVZLK4J6f8A3r+7Utqthg79RVaQIDAQAB",
+   "manifest_version": 2,
+   "name": "Sticky Notes - Just popped up!",
+   "offline_enabled": true,
+   "permissions": [ "storage", "notifications" ],
+   "short_name": "Sticky Notes",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.9.4"
+}
